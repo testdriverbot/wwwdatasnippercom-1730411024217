@@ -1,0 +1,33 @@
+version: 4.0.78
+steps:
+  - prompt: Scroll down to find customer testimonials.
+    commands:
+      - command: scroll-until-text
+        text: Customer Testimonials
+        direction: down
+  - prompt: Scroll down to find customer testimonials.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: Assert they are visible on the page.
+    commands:
+      - command: assert
+        expect: customer testimonials are visible
+  - prompt: Click on a testimonial if interactive.
+    commands:
+      - command: hover-text
+        text: 4.9 / 5
+        description: star rating for customer testimonial
+        action: click
+  - prompt: Click on a testimonial if interactive.
+    commands:
+      - command: hover-text
+        text: 4.9 / 5
+        description: star rating in the testimonials section
+        action: click
+  - prompt: Click on a testimonial if interactive.
+    commands:
+      - command: hover-text
+        text: 4.9 / 5
+        description: star rating in the testimonials section
+        action: click
