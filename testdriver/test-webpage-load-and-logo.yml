@@ -1,0 +1,12 @@
+version: 4.0.78
+steps:
+  - prompt: Assert that the webpage loads successfully.
+    commands:
+      - command: assert
+        expect: the webpage displays "Accelerated productivity for Audit and Finance"
+  - prompt: >-
+      Assert that the logo is visible on the homepage.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: the webpage displays "datasnipper" logo
