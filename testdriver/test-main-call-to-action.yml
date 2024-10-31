@@ -1,0 +1,36 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Book demo."
+    commands:
+      - command: hover-text
+        text: Book demo
+        description: button to book a demo
+        action: click
+  - prompt: Assert that a form or booking interface appears.
+    commands:
+      - command: assert
+        expect: the booking form is visible
+  - prompt: Fill out any necessary information.
+    commands:
+      - command: hover-text
+        text: First name*
+        description: first name input field
+        action: click
+      - command: type
+        text: John
+  - prompt: Fill out any necessary information.
+    commands:
+      - command: hover-text
+        text: Business e-mail*
+        description: business email input field
+        action: click
+      - command: type
+        text: john.doe@example.com
+  - prompt: Fill out any necessary information.
+    commands:
+      - command: hover-text
+        text: Business e-mail*
+        description: business email input field
+        action: click
+      - command: type
+        text: johndoe@example.com
