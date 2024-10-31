@@ -1,0 +1,29 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Watch video."
+    commands:
+      - command: hover-text
+        text: Search Google or type a URL
+        description: main google search
+        action: click
+  - prompt: Click on "Watch video."
+    commands:
+      - command: hover-text
+        text: Watch video
+        description: button on the webpage
+        action: click
+  - prompt: Assert that the video player opens.
+    commands:
+      - command: assert
+        expect: the video player is visible
+  - prompt: Play the video.
+    commands:
+      - command: hover-image
+        description: play button on the video player
+        action: click
+  - prompt: >-
+      Assert that the video plays without errors.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: the video is playing
