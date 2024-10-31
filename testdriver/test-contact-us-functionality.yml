@@ -1,0 +1,45 @@
+version: 4.0.78
+steps:
+  - prompt: Click on the "Contact us" link.
+    commands:
+      - command: scroll-until-text
+        text: Contact us
+        direction: down
+      - command: hover-text
+        text: Contact us
+        description: link in the footer
+        action: click
+  - prompt: >-
+      Assert that a contact form or interactive method to contact the company
+      appears.
+    commands:
+      - command: assert
+        expect: >-
+          a contact form with fields for name, email, and phone number is
+          visible
+  - prompt: >-
+      Complete the contact form or use the interactive method to initiate
+      contact.
+    commands:
+      - command: hover-text
+        text: First name
+        description: input field for first name
+        action: click
+      - command: type
+        text: John Doe
+      - command: hover-text
+        text: Business e-mail
+        description: input field for business email
+        action: click
+      - command: type
+        text: johndoe@example.com
+      - command: hover-text
+        text: Mobile phone number
+        description: input field for mobile phone number
+        action: click
+      - command: type
+        text: 1234567890
+      - command: hover-text
+        text: Submit
+        description: button to submit the contact form
+        action: click
